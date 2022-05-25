@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="./scrips/header/nav.js"></script>
+    <script defer src="./scrips/header/darkmode.js"></script>
+    <script defer src="./scrips/cambiar-menu-darkmode.js"></script>
+    <title>GIFOS</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="header">
+            <div class="nav">
+                <div class="nav__logo">
+                    <a href="#"><img src="./assets/logo-desktop.svg" alt="" class="nav__img" id="nav-log"></a>
+                </div>
+                <button class="nav__toggle">
+                    <img src="./assets/burger.svg"   alt="" class="nav__burger" id="burger-icon">
+                </button>
+                <ul class="navbar">
+                    <li class="nav__item"><a href="#" class="nav__link" id="nav__switch" onclick="cambiarMenuDarkmode();" >Modo Nocturno</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Favoritos</a></li>
+                    <li class="nav__item"><a href="" class="nav__link">Mis GIFOS</a></li>
+                    <div class="navbar__circule"><img class="navbar__img" src="./assets/CTA-crear-gifo-hover-modo-noc.svg" alt=""></div>
+                </ul>
+            </div>
+        </div>
+        <main class="main">
+            <section class="inspirate">
+
+                <div class="inspirate__title">
+                    <h2 class="inspirate__h2">
+                        Inspírate, busca, guarda, y crea los mejores <span class="inspirate__gifos">GIFOS</span>
+                    </h2>
+                </div>
+                <div class="inspirate__ilustration">
+                    <img src="./assets/ilustra_header.svg" alt="" class="ilustration__img">
+                </div>
+
+                <div class="inspirate__searchbox">
+                    <input class="inspirate__input" type="text" placeholder="Busca GIFOS y más">
+                    <div class="searchbox__cont__icon">
+                        <img src="./assets/icon-search.svg" alt="" class="searchbox__search-icon" id="search-lupa">
+                    </div>
+                </div>
+
+                <div class="inspirate__subtitle">
+                    <h2 class="ins__subtitle__h2">
+                        Trending:
+                    </h2>
+                    <div class="paragrahp__cont">
+                        <p class="paragrahp paragrahp__one">
+                            Reactions, Entertainment, 
+                        </p>
+                        <p class="paragrahp">
+                             Sports, Stickers, Artists
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <div class="trending-gifos">
+                <h2 class="trending__title-h2">
+                    Trending GIFOS
+                </h2>
+                <p class="trenging__paragraph">
+                    Mira los últimos 
+                    GIFOS de nuestra comunidad.
+                </p>
+                <div class="trending__container">
+                </div>
+
+            </div>
+        </main>
+        
+
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+.trending-gifos{
+    background-color: #F3F5F8;
+    margin-top: 50px;
+    padding-bottom: 185px;
+}
+
+.trending__title-h2{
+    text-align: center;
+    padding-top: 65px;
+}
+.trenging__paragraph{
+    text-align: center;
+    padding-top: 18px;
+}
+.trending__container{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+}
+.btn__container{
+    display: block;
+    padding: 1rem;
+    width: 10%;
+}
+.trending__slider--container{
+    overflow: hidden;
+}
+.trending__slider{
+    overflow: hidden;
+    display: flex;
+}
