@@ -13,19 +13,36 @@
     padding-top: 18px;
 }
 .trending__container{
-    max-width: 100%;
+    top: 100px;
+    margin: 0 auto;
+    position: relative;
+    width: 80%; 
+}
+.contenedor-slider{
+    width: 100%;
     display: flex;
-    align-items: center;
-}
-.btn__container{
-    display: block;
-    padding: 1rem;
-    width: 10%;
-}
-.trending__slider--container{
     overflow: hidden;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+    height: 250px;
 }
-.trending__slider{
-    overflow: hidden;
-    display: flex;
+.img__slider{
+    height: 100%;
+    margin: 0 5px;
+}
+.img__slider:hover{
+    border: 2px solid black;
+}
+.button-slider{
+    background: none;
+    border: none;
+    position: absolute;
+    top: 43%;
+    cursor: pointer;
+}
+.btn-left{
+    left: -35px;
+}
+.btn-right{
+    right: -35px;
 }
