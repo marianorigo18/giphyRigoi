@@ -3,7 +3,7 @@ const btnLeft = document.querySelector(".btn-left");
 const btnRight = document.querySelector(".btn-right")
 
 btnRight.addEventListener('click', () => {
-    carretel.scrollLeft += carretel.offsetWidth;
+    carretel.scrollLeft += 450; /* += carretel.offsetWidth */
 });
 
 btnLeft.addEventListener('click', () => {
