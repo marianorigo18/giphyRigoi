@@ -11,7 +11,7 @@
     margin: 0 auto;
     font-size: 24px;
     color: #572EE5;
-    transition: .3s ease all;
+    transition: .3s;
     body.darkmode &{
         color: #ffffffff;
     }
@@ -41,13 +41,15 @@
     padding-left: 55px;
     padding-right: 15px;
     font-size: 16px;
-    cursor: pointer;
     z-index: 500;
     outline: none;
-    transition: .3s ease all;
+    font-family: $montserrat_sanserif;
+    font-weight: 600;
+    transition: .3s;
     body.darkmode &{
         border: 1px solid #ffffffff;
         background: $colordark;
+        color: #ffffffff;
     }
 }
 .searchbox__cont__icon{
@@ -61,11 +63,13 @@
 .searchbox__search-icon{
     padding: 15px 20px;
     z-index: 600;
+    cursor: pointer;
 }
 .inspirate__subtitle{
     text-align: center;
     color: #572EE5;
     margin-top: 31px;
+    transition: .3s;
     body.darkmode &{
         color: #ffffffff;
     }
@@ -87,7 +91,94 @@
     padding-top: 5px;
     font-weight: 500;
 }
+.divider{
+    width: 20%;
+    background-color: #9cafc3;
+    height: 1px;
+    margin: 50px auto;
+
+}
+.title__result{
+    text-align: center;
+    font-size: 35px;
+    font-family: $montserrat_sanserif;
+    font-weight: 700;
+    color: #572EE5;
+    margin-bottom: 60px;
+    transition: .3s;
+    body.darkmode &{
+        color: #ffffffff;
+    }
+}
+.content__result{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.inspirate__result .sprite-container{
+    height: 200px;
+    width: 260px;
+    position: relative;
+    margin: 0 auto;
+}
+.inspirate__result .capa{
+    width: 100%;
+}
+.inspirate__result .contenido{
+    width: 100%;
+    min-width: 200px;
+    height: 100%;
+}
+.inspirate--button{
+    display: block;
+    width: 127px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #572EE5;
+    background: none;
+    margin: 80px auto; 
+    body.darkmode &{
+        border: 2px solid white;
+    }
+}
+.inspirate--button .button--a{
+    color: #572ee5;
+    text-decoration: none;
+    background: none;
+    display: block;
+    width: 100%;
+    line-height: 25px;
+    font-family: $montserrat_sanserif;
+    font-weight: 700;
+    cursor: pointer;
+    body.darkmode &{
+        color: #ffffffff;
+    }
+}
+@media(max-width: 1150px){
+    .content__result{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 960px){
+    .content__result{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 640px){
+    .content__result{
+        width: 90%;
+    }
+}
+@media(max-width: 640px){
+    .content__result{
+        grid-template-columns: 1fr;
+    }
+}
 @media (min-width: 640px){
+
     .inspirate__title{
         width: 600px;
         padding-top: 75px;

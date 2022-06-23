@@ -1,0 +1,25 @@
+.main__gifos{
+    position: relative;
+    top: 110px;
+    transition: .3s;
+    background-color: white;
+    body.darkmode &{
+        background-color: #37383C;
+        color: white;
+    }
+}
+.contenedor-mis-gis{
+    text-align: center;
+
+}
+.title-mis-gif{
+    color: $lila;
+    margin-bottom: 110px;
+}
+.img-gis-sin-cont{
+    margin-bottom: 40px;
+}
+.paragraph-mis-gif{
+    color: $verdesito;
+    margin-bottom: 136px;
+}

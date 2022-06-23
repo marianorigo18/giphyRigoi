@@ -1,0 +1,25 @@
+.main__favoritos{
+    position: relative;
+    top: 110px;
+    text-align: center;
+    background-color: white;
+    body.darkmode & {
+        background: #37383C;
+    } 
+}
+.h1{
+    font-size: 10rem;
+    body.darkmode & {
+        background: #37383C;
+        color: lightcoral;
+    } 
+}
+.title-fav{
+    color: $lila;
+    margin-bottom: 110px;
+}
+.paragraph-fav{
+    color: $verdesito;
+    width: 470px;
+    margin: 0 auto 130px;
+}

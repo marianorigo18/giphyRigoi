@@ -6,7 +6,7 @@
 }
 body{
     background-color: #ffffffff;
-    transition: .3s ease all;
+    transition: .3s;
     &.darkmode{
         background-color: #37383C;
     }
@@ -15,4 +15,10 @@ body{
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
+}
+.divider-bot{
+    border-bottom: 5px solid $lila;
+    body.darkmode &{
+        border-bottom: 5px solid #000000;
+    }
 }

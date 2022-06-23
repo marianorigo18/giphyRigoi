@@ -5,7 +5,8 @@
     border-top: 5px solid #572EE5;
     z-index: 1000;
     background-color: #ffffffff ;
-    transition: .3s ease all;
+    transition: .3s;
+    max-width: 1440px;
     body.darkmode & {
         background: #37383C;
         border-top: 5px solid #000000;
@@ -18,6 +19,10 @@
     height: 100%;
     width: 80%;
     margin: 0 auto;
+
+}
+.nav__logo{
+    cursor: pointer;
 }
 .nav__toggle{
     border: none;
@@ -32,6 +37,7 @@
 .nav__item{
     list-style-type: none;
     margin: 0 25px;
+    cursor: pointer;
 }
 .nav__link{
     text-decoration: none;
@@ -39,7 +45,7 @@
     font-size: 13px;
     color: #572EE5;
     font-weight: 700;
-    transition: .3s ease all;
+    transition: .3s;
     body.darkmode &{
         color: #ffffffff;
     }
@@ -50,10 +56,16 @@
     border-radius: 50%;
     width: 56px;
     height: 56px;
-    transition: .3s ease all;
+    transition: .3s;
     body.darkmode & {
         border: #37383C;
     }
+}
+[data-content]{
+    display: none;
+}
+.data-active[data-content]{
+    display: block;
 }
 @media (max-width: 768px){
     .header{
@@ -79,7 +91,6 @@
         height: 100vh;
         left: 100%;
         transition: left .3s;
-        transition: .3s ease all;
         body.darkmode &{
             background: #000000;
         }

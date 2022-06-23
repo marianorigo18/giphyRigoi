@@ -1,0 +1,21 @@
+.footer{
+    height: 116px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 110px auto 0 auto;
+    line-height: 116px;
+    body.darkmode & {
+        background-color:#37383C;
+        color: #fff;
+    }
+}
+.social__paragraph{
+    display: flex;
+    align-items: center;
+}
+.social__paragraph .social-icon{
+    height: 20px;
+    margin-left: 20px;
+}

@@ -5,34 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <script defer src="./scrips/header/nav.js"></script>
-    <script defer src="./scrips/header/darkmode.js"></script>
-    <script defer src="./scrips/header/cambiar-menu-darkmode.js"></script>
-    <script defer src="./scrips/header/get-trending.js"></script>
-    <script defer src="./scrips/header/buttons-slider.js"></script>
+    <script defer src="./scrips/nav.js"></script>
+    <script defer src="./scrips/darkmode.js"></script>
+    <script defer src="./scrips/cambiar-menu-darkmode.js"></script>
+    <script defer src="./scrips/search.js"></script>
+    <script defer src="./scrips/get-trending.js"></script>
+    <script defer src="./scrips/buttons-slider.js"></script>
+    <script defer src="./scrips/displays.js"></script>
+    <script defer src="./scrips/modal.js"></script>
     <title>GIFOS</title>
 </head>
 <body>
+
     <div class="wrapper">
 
         <div class="header">
             <div class="nav">
                 <div class="nav__logo">
-                    <a href="#"><img src="./assets/logo-desktop.svg" alt="" class="nav__img" id="nav-log"></a>
+                    <a data-target="#inicio "><img src="./assets/logo-desktop.svg" alt="" class="nav__img" id="nav-log"></a>
                 </div>
                 <button class="nav__toggle">
                     <img src="./assets/burger.svg"   alt="" class="nav__burger" id="burger-icon">
                 </button>
                 <ul class="navbar">
                     <li class="nav__item"><a href="#" class="nav__link" id="nav__switch" onclick="cambiarMenuDarkmode();" >Modo Nocturno</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Favoritos</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Mis GIFOS</a></li>
-                    <div class="navbar__circule"><img class="navbar__img" src="./assets/CTA-crear-gifo-hover-modo-noc.svg" alt=""></div>
+                    <li class="nav__item"><a data-target="#favoritos" class="nav__link">Favoritos</a></li>
+                    <li class="nav__item"><a data-target="#misGifos" class="nav__link">Mis GIFOS</a></li>
+                    <div class="navbar__circule"><a href="#camera"><img class="navbar__img" src="./assets/CTA-crear-gifo-hover-modo-noc.svg" alt=""></a></div>
                 </ul>
             </div>
         </div>
+
         <main class="main">
-            <section class="inspirate">
+
+            <section data-content class="inspirate data-active" id="inicio">
 
                 <div class="inspirate__title">
                     <h2 class="inspirate__h2">
@@ -44,8 +50,8 @@
                 </div>
 
                 <div class="inspirate__searchbox">
-                    <input class="inspirate__input" type="text" placeholder="Busca GIFOS y más">
-                    <div class="searchbox__cont__icon">
+                    <input class="inspirate__input" id="inspirate__input" type="text" placeholder="Busca GIFOS y más">
+                    <div class="searchbox__cont__icon" id="lupa__btn">
                         <img src="./assets/icon-search.svg" alt="" class="searchbox__search-icon" id="search-lupa">
                     </div>
                 </div>
@@ -63,8 +69,39 @@
                         </p>
                     </div>
                 </div>
+                <div class="inspirate__result">
+                    <div class="divider"></div>
+                    <div class="title__result" id="title--result"></div>
+                    <div class="content__result" id="content__result"> 
+                    </div>
+                    <div id="inspirate-block-button">
+                    </div>
+                </div>
             </section>
-            <div class="trending-gifos">
+
+            <main data-content class="main__favoritos" id="favoritos">
+                
+                <div class="contenedor-fav">
+                    <img src="./assets/icon-favoritos.svg" alt="">
+                    <h2 class="title-fav">Favoritos</h2>
+                    <img src="./assets/icon-fav-sin-contenido.svg" alt="">
+                    <h2 class="paragraph-fav">
+                        "¡Guarda tu primer GIFO en Favoritos 
+                        para que se muestre aquí!"
+                    </h2>
+                </div>
+            </main>   
+
+            <main data-content class="main__gifos" id="misGifos">
+                <div class="contenedor-mis-gis">
+                    <img src="./assets/icon-mis-gifos.svg" alt="">
+                    <h2 class="title-mis-gif">Mis GIFOS</h2>
+                    <img class="img-gis-sin-cont" src="./assets/icon-mis-gifos-sin-contenido.svg" alt="">
+                    <h2 class="paragraph-mis-gif">¡Anímate a crear tu primer GIFO!</h2>
+                </div>
+            </main> 
+
+            <div class="trending-gifos" id="trending-gifos">    
                 <h2 class="trending__title-h2">
                     Trending GIFOS
                 </h2>
@@ -74,17 +111,48 @@
                 </p>
 
                 <div class="trending__container">
-                    <button class="button-slider btn-left"><img src="./assets/arrow-left.svg" alt=""></button>
+                    <button class="button-slider btn-left"><img src="./assets/btn-left-one.svg" alt=""></button>
                     <div class="contenedor-slider" id="contenedor-slider"></div>
-                    <button class="button-slider btn-right"><img src="./assets/arrow-right.svg" alt=""></button></div>
+                    <button class="button-slider btn-right"><img src="./assets/btn-right-one.svg" alt=""></button>
                 </div>
-                
-                
+            </div>  
+
+            <section data-content class="modal" id="modal" >
+                <div>
+                    <div><img src="./assets/close.svg" class="modal__close" onclick="closeModal()" alt=""></div>
+                </div>
+                <div class="modal__container">
+                    
+                    <div><img class="img__modal" src="./assets/camara.svg" alt=""></div>
+                    <p>marianorigo18</p>
+                    <h6>Hello WORLD</h6>
+                    <div class="modal__icons">
+                        <img src="./assets/icon-fav.svg" alt="">
+                        <img src="./assets/icon-download.svg" alt="">
+                    </div>
+                    
+                </div>
+            </section>
+
         </main>
-        
+
+        <footer class="footer">
+            <div class="social__paragraph">
+                <p>Compartir en:</p>
+                <a href=""><img src="./assets/icon_facebook.svg" class="social-icon" alt=""></a>
+                <a href=""><img src="./assets/icon-twitter.svg" class="social-icon" alt=""></a>
+                <a href=""><img src="./assets/icon_instagram.svg" class="social-icon" alt=""></a>
+            </div>
+            <div class="paragraph__copy">
+                © GIFOS 2020 All Rights Reserved.
+            </div>
+        </footer>
+
+        <div class="divider-bot">
+
+        </div>
 
     </div>
-    
     
 </body>
 </html>
